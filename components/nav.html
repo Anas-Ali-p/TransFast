@@ -1,0 +1,64 @@
+<nav x-data="{ mobileMenuOpen: false }" class="fixed w-full bg-white/95 backdrop-blur-lg z-50 shadow-sm border-b border-gray-100">
+    <div class="container mx-auto px-6 py-4">
+        <div class="flex items-center justify-between">
+            <div class="flex items-center">
+                <a href="index.html" class="flex items-center">
+                    <i class="fas fa-bolt text-blue-600 text-2xl mr-2"></i>
+                    <span class="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">TransFast</span>
+                </a>
+            </div>
+            
+            <button @click="mobileMenuOpen = !mobileMenuOpen" class="md:hidden p-2 text-gray-600 hover:text-blue-600 focus:outline-none">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+
+            <div class="hidden md:flex space-x-8 items-center">
+                <a href="#hero" class="text-gray-600 hover:text-blue-600 transition font-medium relative group px-3 py-2 rounded-lg hover:bg-blue-50" @click.prevent="document.querySelector('#hero').scrollIntoView({ behavior: 'smooth' })">
+                    Home
+                    <span class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-0 h-0.5 bg-blue-600 transition-all group-hover:w-3/4"></span>
+                </a>
+                <a href="#features" class="text-gray-600 hover:text-blue-600 transition font-medium relative group px-3 py-2 rounded-lg hover:bg-blue-50" @click.prevent="document.querySelector('#features').scrollIntoView({ behavior: 'smooth' })">
+                    Features
+                    <span class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-0 h-0.5 bg-blue-600 transition-all group-hover:w-3/4"></span>
+                </a>
+                <a href="#pricing" class="text-gray-600 hover:text-blue-600 transition font-medium relative group px-3 py-2 rounded-lg hover:bg-blue-50" @click.prevent="document.querySelector('#pricing').scrollIntoView({ behavior: 'smooth' })">
+                    Pricing
+                    <span class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-0 h-0.5 bg-blue-600 transition-all group-hover:w-3/4"></span>
+                </a>
+                <a href="#cta" class="text-gray-600 hover:text-blue-600 transition font-medium relative group px-3 py-2 rounded-lg hover:bg-blue-50" @click.prevent="document.querySelector('#cta').scrollIntoView({ behavior: 'smooth' })">
+                    Enterprise
+                    <span class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-0 h-0.5 bg-blue-600 transition-all group-hover:w-3/4"></span>
+                </a>
+                <a href="#footer" class="text-gray-600 hover:text-blue-600 transition font-medium relative group px-3 py-2 rounded-lg hover:bg-blue-50" @click.prevent="document.querySelector('#footer').scrollIntoView({ behavior: 'smooth' })">
+                    Support
+                    <span class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-0 h-0.5 bg-blue-600 transition-all group-hover:w-3/4"></span>
+                </a>
+            </div>
+
+            <div class="hidden md:flex items-center space-x-4">
+                <a href="#login" class="text-gray-600 hover:text-blue-600 font-medium px-3 py-2 rounded-lg hover:bg-blue-50" @click.prevent="$dispatch('open-login')">
+                    Login
+                </a>
+                <button class="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition font-medium shadow-lg hover:shadow-blue-500/50">
+                    Get Started
+                </button>
+            </div>
+        </div>
+
+        <div x-show="mobileMenuOpen" @click.away="mobileMenuOpen = false" class="md:hidden mt-4">
+            <a href="#hero" class="block py-3 px-4 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-lg" @click.prevent="document.querySelector('#hero').scrollIntoView({ behavior: 'smooth' }); mobileMenuOpen = false">Home</a>
+            <a href="#features" class="block py-3 px-4 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-lg" @click.prevent="document.querySelector('#features').scrollIntoView({ behavior: 'smooth' }); mobileMenuOpen = false">Features</a>
+            <a href="#pricing" class="block py-3 px-4 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-lg" @click.prevent="document.querySelector('#pricing').scrollIntoView({ behavior: 'smooth' }); mobileMenuOpen = false">Pricing</a>
+            <a href="#cta" class="block py-3 px-4 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-lg" @click.prevent="document.querySelector('#cta').scrollIntoView({ behavior: 'smooth' }); mobileMenuOpen = false">Enterprise</a>
+            <a href="#footer" class="block py-3 px-4 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-lg" @click.prevent="document.querySelector('#footer').scrollIntoView({ behavior: 'smooth' }); mobileMenuOpen = false">Support</a>
+            <div class="mt-4 border-t border-gray-100 pt-4">
+                <a href="#login" class="block py-3 px-4 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-lg" @click.prevent="$dispatch('open-login'); mobileMenuOpen = false">
+                    Login
+                </a>
+                <button class="w-full bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition mt-2">
+                    Get Started
+                </button>
+            </div>
+        </div>
+    </div>
+</nav>
