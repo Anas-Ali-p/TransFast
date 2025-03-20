@@ -1,7 +1,3 @@
-Here's a great GitHub description for TransFast:
-
----
-
 # TransFast 🚀  
 **Fast & Secure File Transfer**  
 
@@ -15,6 +11,6 @@ TransFast is a sleek and efficient file transfer platform designed to make shari
 ✅ **User-Friendly Interface** – Designed for simplicity and ease of use.  
 
 ### 🌍 Get Started  
-Visit **[TransFast Website](#)** to start transferring files now!  
+Visit **[TransFast Website](https://trans-fast.vercel.app/)** to start transferring files now!  
 
 🔗 *Want to contribute?* Check out our [GitHub Repository](https://github.com/Anas-Ali-p/TransFast) and help improve TransFast!  
